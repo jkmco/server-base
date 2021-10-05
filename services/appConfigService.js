@@ -36,7 +36,7 @@ function getAppConfig(key) {
 async function getAppConfigValue(key) {
   try {
     const result = await getAppConfig(key);
-    return result.value;
+    return result.value.length == 1 ? result.value[0] : result.value;
   } catch (error) {
     return { status: "fail", error: error };
   }
@@ -80,7 +80,7 @@ function deleteAppConfig(key) {
 module.exports = {
   getAllAppConfig,
   getAppConfig,
+  getAppConfigValue,
   saveAppConfig,
   deleteAppConfig,
-  getAppConfigValue,
 };

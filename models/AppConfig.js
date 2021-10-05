@@ -4,7 +4,7 @@ const AppConfig = mongoose.model(
   "AppConfig",
   new mongoose.Schema({
     key: String,
-    value: String,
+    value: Array,
     updatedAt: Date,
   })
 );
