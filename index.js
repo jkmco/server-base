@@ -14,7 +14,6 @@ const {
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 const DB_URI = process.env.DB_URI || "mongodb://localhost/your_db_name";
-const API_URI = process.env.API_URI || "http://localhost:3000";
 
 // middleware
 app.use(cors());
